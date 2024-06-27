@@ -4,11 +4,14 @@ public class SutdaCard {
     int num = 1;
     boolean isKwang = true;
 
+    public SutdaCard(){
+        this(1, true);
+    }
+
     public SutdaCard(int num, boolean isKwang){
         this.num = num;
         this.isKwang = isKwang;
     }
-    public SutdaCard(){}
 
 //    public String info(){
 //        String answer;
@@ -22,5 +25,9 @@ public class SutdaCard {
 
     public String info(){
         return (isKwang == true) ? num+"K" : String.valueOf(num);
+    }
+
+    public String toString(){
+        return num + ( isKwang ? "K" : "");
     }
 }
