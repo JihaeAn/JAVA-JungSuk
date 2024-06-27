@@ -12,4 +12,20 @@ public class SutdaDeck {
             cards[i] = new SutdaCard(num, isKwang);
         }
     }
+
+    public void shuffle(){
+        for(int i = 0; i < cards.length; i++){
+            int a = (int)(Math.random() * 19);
+            SutdaCard origin = cards[i];
+            cards[i] = cards[a];
+            cards[a] = origin;
+        }
+    }
+    public SutdaCard pick(int index){
+        return cards[index];
+    }
+    public SutdaCard pick(){
+        int ran = (int)(Math.random() * 19);
+        return cards[ran];
+    }
 }
