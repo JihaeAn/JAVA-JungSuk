@@ -1,8 +1,8 @@
 package javaJungsuk.객체지향;
 
 public class SutdaCard {
-    int num = 1;
-    boolean isKwang = true;
+    final int num;
+    final boolean isKwang;
 
     public SutdaCard(){
         this(1, true);
