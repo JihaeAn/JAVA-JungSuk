@@ -20,7 +20,6 @@ public class Buyer {
         if(i == cart.length){
             Product3[] cart2 = new Product3[cart.length * 2];
             System.arraycopy(cart, 0, cart2, 0, cart.length);
-            // 새로운 장바구니와 기존의 장바구니를 바꾼다????????? 어케하는건데;;;
             cart = cart2;
         }
         cart[i] = p;
