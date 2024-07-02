@@ -1,4 +1,4 @@
-package javaJungsuk.객체지향;
+package javaJungsuk.예외처리;
 
 public class Exercise8_10 {
     public static void main(String[] args) {
