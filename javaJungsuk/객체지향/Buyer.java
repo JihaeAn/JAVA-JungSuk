@@ -9,17 +9,16 @@ public class Buyer {
 
     void buy(Product3 p) {
         if(p.price > money) {
-            System.out.println("잔액이 부족하여 " + p + "를 살 수 없습니다.");
+            System.out.println("잔액이 부족하여 " + p + "를 살 수 없습니다.");    // p.toString() 안 해도 됨! 오버라이딩 해놨잖아 !
             return;
         } else {
-            money = money - p.price;
+            money -= p.price;
             add(p);
         }
     }
     void add(Product3 p) {
         if(i == cart.length){
-            Product3[] cart2 = new Product3[cart.length * 2];
-            System.arraycopy(cart, 0, cart2, 0, cart.length);
+            Product3[] cart2 = Arrays.copyOf(cart, (cart.length) * 2);
             cart = cart2;
         }
         cart[i] = p;
@@ -29,6 +28,7 @@ public class Buyer {
         System.out.println("장바구니 목록: " + Arrays.toString(cart));
         int totalPrice = 0;
         for(Product3 pp : cart){
+            if(pp == null) break;   // 유효성 검사도 해주자!!!!!
             totalPrice += pp.price;
         }
         System.out.println("사용한 금액: " + totalPrice);
