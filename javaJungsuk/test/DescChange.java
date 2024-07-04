@@ -1,3 +1,5 @@
+package javaJungsuk.test;
+
 import java.util.Arrays;
 import java.util.Collections;
 // reverse()는 StringBuilder에서만 사용 가능 (String X)
