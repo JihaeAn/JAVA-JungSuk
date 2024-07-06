@@ -15,6 +15,7 @@ public class Exercise9_10 {
             System.arraycopy(str.toCharArray(), 0, arr, 0, str.length());
             // arr[i] = str.charAt(i);
         } else if (alignment == 1) {
+            // 어디서부터 붙여넣기 할 건지 이게 너무 궁금했는데 이렇게 하면 됨 !!!
             System.arraycopy(str.toCharArray(), 0, arr, (length - str.length()) / 2, str.length());
         } else if (alignment == 2) {
             System.arraycopy(str.toCharArray(), 0, arr, (length - str.length()), str.length());
