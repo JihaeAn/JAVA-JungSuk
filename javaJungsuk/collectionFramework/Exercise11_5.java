@@ -28,8 +28,13 @@ class Student implements Comparable{
     }
 
     public String toString() {
-        return name +","+ ban +","+ no +","+ kor    +","+ eng +","+ math
-                +","+ getToal() +","+getAverage();
+        return name +","
+                + ban +","
+                + no +","
+                + kor +","
+                + eng +","
+                + math +","
+                + getToal() +","+getAverage();
     }
     public int compareTo(Object obj) {
         if(obj instanceof Student) {
